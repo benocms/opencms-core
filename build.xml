@@ -126,8 +126,10 @@
     		target="${java.target.version}">
        	    <classpath>
        	      <fileset dir="${opencms.input.libs.compile}">
-       	        <include name="**/*.jar"/>
-       	        <exclude name="**/gwt-*.jar"/>
+                <include name="**/*.jar"/>
+                <exclude name="**/gwt-dev*.jar"/>
+                <exclude name="**/gwt-user*.jar"/>
+       	       	<exclude name="**/gwt-servlet*.jar"/>
        	      </fileset>
      	      <fileset dir="${opencms.input.libs.runtime}">
      	        <include name="**/*.jar"/>
